@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.naver',
     'cart',
     'coupon',
+    'order',
 ]
 
 MIDDLEWARE = [
@@ -177,3 +178,11 @@ LOGIN_REDIRECT_URL = '/'
 
 # For session of cart app
 CART_ID = os.getenv('SESSION_ID_FOR_CARD')
+
+# For pay
+IAMPORT_KEY = os.getenv('IAMPORT_KEY')
+IAMPORT_SECRET = os.getenv('IAMPORT_SECRET')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
